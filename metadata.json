@@ -1,0 +1,6 @@
+{
+  "name": "Mobbin Clone",
+  "description": "A high-fidelity visual and interactive clone of Mobbin, the library of real-world design inspiration.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

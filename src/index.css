@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-display: "Space Grotesk", sans-serif;
+  
+  --color-brand-blue: rgb(0, 153, 255);
+  --color-brand-blue-hover: #0065ff;
+  --color-brand-slate: rgb(20, 20, 20);
+  --color-brand-gray: rgb(113, 113, 113);
+  --color-brand-muted: rgb(173, 173, 173);
+}
+
+/* Base resets & animations */
+html {
+  scroll-behavior: smooth;
+}
+html, body {
+  background-color: rgb(255, 255, 255);
+  color: rgb(20, 20, 20);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Hide scrollbars for sliders while maintaining native swipe */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Scroll ticker animations */
+@keyframes ticker {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
+}
+
+@keyframes ticker-reverse {
+  0% { transform: translate3d(-50%, 0, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}
+
+.animate-ticker {
+  animation: ticker 45s linear infinite;
+}
+
+.animate-ticker-fast {
+  animation: ticker 25s linear infinite;
+}
+
+.animate-ticker-reverse {
+  animation: ticker-reverse 45s linear infinite;
+}
+
+.animate-ticker:hover, .animate-ticker-reverse:hover {
+  animation-play-state: paused;
+}
